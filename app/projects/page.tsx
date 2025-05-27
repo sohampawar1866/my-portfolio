@@ -25,7 +25,7 @@ export default function ProjectsPage() {
     },
     {
       title: "Project Sankalpa - IN PROGRESS",
-      image: "/placeholder.svg?height=300&width=400",
+      image: "/progress.jpg?height=300&width=400",
       github: "https://github.com/sohampawar1866/portfolio",
       demo: "https://sohampawar1866.github.io/portfolio/",
       description: "An autonomous blockchain assistant built with Next.js, TypeScript, and TensorFlow that executes smart contract interactions, automates DeFi operations, and makes data-driven decisions. Features real-time market analysis, portfolio management, and seamless Web3 integration for intelligent on-chain automation.",
