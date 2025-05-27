@@ -21,7 +21,7 @@ export default function ProjectsPage() {
       image: "/pro_pf.png?height=300&width=400",
       github: "https://github.com/sohampawar1866/portfolio",
       demo: "https://sohampawar1866.github.io/portfolio/",
-      description: "A responsive portfolio website showcasing my skills and projects.",
+      description: "A modern, responsive portfolio website built with React and Tailwind CSS, showcasing innovative web development projects, technical expertise, and professional experience. Features seamless navigation, interactive components, and optimized performance to highlight skills in frontend development and user experience design.",
     },
     {
       title: "Project Sankalpa",
