@@ -24,11 +24,11 @@ export default function ProjectsPage() {
       description: "A modern, responsive portfolio website built with React and Tailwind CSS, showcasing innovative web development projects, technical expertise, and professional experience. Features seamless navigation, interactive components, and optimized performance to highlight skills in frontend development and user experience design.",
     },
     {
-      title: "Project Sankalpa",
+      title: "Project Sankalpa - IN PROGRESS",
       image: "/placeholder.svg?height=300&width=400",
       github: "https://github.com/sohampawar1866/portfolio",
       demo: "https://sohampawar1866.github.io/portfolio/",
-      description: "IN PROGRESS.",
+      description: "An autonomous blockchain assistant built with Next.js, TypeScript, and TensorFlow that executes smart contract interactions, automates DeFi operations, and makes data-driven decisions. Features real-time market analysis, portfolio management, and seamless Web3 integration for intelligent on-chain automation.",
     },
   ]
 
