@@ -10,25 +10,25 @@ import Footer from "@/components/footer"
 export default function ProjectsPage() {
   const projects = [
     {
-      title: "Portfolio Project",
-      image: "/placeholder.svg?height=300&width=400",
+      title: "E-Votrix: Smart WEB3 Based Voting Platform",
+      image: "/pro_ev.png?height=300&width=400",
+      github: "https://github.com/sohampawar1866/evotrix",
+      demo: "https://evotrix.sohampawar.me",
+      description: "🗳️ A secure and transparent voting platform built on Ethereum blockchain using smart contracts. Features multi-authority verification, Aadhar-based voter authentication, real-time vote counting, and fraud prevention. Built with Next.js, TypeScript, Ethers.js, and deployed on Sepolia testnet.",
+    },
+    {
+      title: "Portfolio Website",
+      image: "/pro_pf.png?height=300&width=400",
       github: "https://github.com/sohampawar1866/portfolio",
       demo: "https://sohampawar1866.github.io/portfolio/",
       description: "A responsive portfolio website showcasing my skills and projects.",
     },
     {
-      title: "Portfolio Project",
+      title: "Project Sankalpa",
       image: "/placeholder.svg?height=300&width=400",
       github: "https://github.com/sohampawar1866/portfolio",
       demo: "https://sohampawar1866.github.io/portfolio/",
-      description: "A responsive portfolio website showcasing my skills and projects.",
-    },
-    {
-      title: "Portfolio Project",
-      image: "/placeholder.svg?height=300&width=400",
-      github: "https://github.com/sohampawar1866/portfolio",
-      demo: "https://sohampawar1866.github.io/portfolio/",
-      description: "A responsive portfolio website showcasing my skills and projects.",
+      description: "IN PROGRESS.",
     },
   ]
 
