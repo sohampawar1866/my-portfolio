@@ -116,6 +116,37 @@ export default function CustomCursor() {
     return () => clearInterval(interval)
   }, [])
 
+  // Hide the default cursor when custom cursor is active, but only on non-touch devices
+  useEffect(() => {
+    const isTouchDevice = () => {
+      return (
+        'ontouchstart' in window ||
+        navigator.maxTouchPoints > 0 ||
+        (navigator as any).msMaxTouchPoints > 0
+      )
+    }
+    if (!isTouchDevice()) {
+      document.body.style.cursor = "none"
+    }
+    return () => {
+      document.body.style.cursor = ""
+    }
+  }, [])
+
+  // Don't render custom cursor on small/touch devices
+  if (typeof window !== 'undefined') {
+    const isTouchDevice = () => {
+      return (
+        'ontouchstart' in window ||
+        navigator.maxTouchPoints > 0 ||
+        (navigator as any).msMaxTouchPoints > 0
+      )
+    }
+    if (isTouchDevice() || window.innerWidth < 768) {
+      return null
+    }
+  }
+
   const getCursorSize = () => {
     switch (cursorVariant) {
       case "button":
