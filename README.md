@@ -1,5 +1,5 @@
 ## **🌐 Live Portfolio**
-**Visit my portfolio**: [Soham Pawar - https://sohampawar.me](https://sohampawar.me)
+**Visit my portfolio**: [https://sohampawar.me](https://sohampawar.me)
 
 # **👨‍💻 Soham Pawar - Portfolio Website**
 
