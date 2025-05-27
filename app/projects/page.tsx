@@ -14,7 +14,7 @@ export default function ProjectsPage() {
       image: "/pro_ev.png?height=300&width=400",
       github: "https://github.com/sohampawar1866/evotrix",
       demo: "https://evotrix.sohampawar.me",
-      description: "🗳️ A secure and transparent voting platform built on Ethereum blockchain using smart contracts. Features multi-authority verification, Aadhar-based voter authentication, real-time vote counting, and fraud prevention. Built with Next.js, TypeScript, Ethers.js, and deployed on Sepolia testnet.",
+      description: "A secure and transparent voting platform built on Ethereum blockchain using smart contracts. Features multi-authority verification, Aadhar-based voter auth, real-time vote count, and fraud prevention. Built with Next.js, TypeScript, Ethers.js, and deployed on Sepolia testnet.",
     },
     {
       title: "Portfolio Website",
