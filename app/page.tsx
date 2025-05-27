@@ -53,7 +53,7 @@ export default function HomePage() {
         >
           <div className="w-48 h-48 mx-auto mb-8 rounded-full overflow-hidden border-4 border-white/20 backdrop-blur-sm">
             <img
-              src="/placeholder.svg?height=200&width=200"
+              src="/profile.png?height=200&width=200"
               alt="Soham Pawar Profile Picture"
               className="w-full h-full object-cover"
             />
