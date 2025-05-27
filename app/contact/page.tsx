@@ -51,8 +51,8 @@ export default function ContactPage() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-indigo-900 to-slate-900">
       {/* Navigation */}
-      <nav className="flex justify-between items-center p-6 md:p-8">
-        <Link href="/" className="text-2xl font-bold text-white">
+      <nav className="flex justify-between items-center p-4 md:p-6 lg:p-8">
+        <Link href="/" className="text-xl md:text-2xl font-bold text-white">
           Soham Pawar
         </Link>
         <Button variant="ghost" size="sm" asChild className="text-white hover:text-indigo-300">
@@ -63,37 +63,37 @@ export default function ContactPage() {
         </Button>
       </nav>
 
-      <div className="container mx-auto px-6 py-12">
+      <div className="container mx-auto px-4 sm:px-6 py-8 sm:py-12 max-w-4xl">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
-          className="text-center mb-16"
+          className="text-center mb-12 sm:mb-16"
         >
-          <p className="text-indigo-300 text-lg mb-4">Get in Touch</p>
-          <h1 className="text-5xl md:text-6xl font-bold text-white mb-8">Contact Me</h1>
+          <p className="text-indigo-300 text-base sm:text-lg mb-3 sm:mb-4">Get in Touch</p>
+          <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-white mb-6 sm:mb-8">Contact Me</h1>
         </motion.div>
 
         <div className="max-w-4xl mx-auto">
-          <div className="grid md:grid-cols-2 gap-8 mb-12">
+          <div className="grid sm:grid-cols-2 gap-6 sm:gap-8 mb-8 sm:mb-12">
             <motion.div
               initial={{ opacity: 0, x: -50 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
             >
-              <Card className="bg-white/10 backdrop-blur-sm border-white/20 p-8 text-center hover:transform hover:scale-105 transition-all duration-300">
+              <Card className="bg-white/10 backdrop-blur-sm border-white/20 p-6 sm:p-8 text-center hover:transform hover:scale-105 transition-all duration-300">
                 <CardContent className="space-y-4">
                   <div className="w-16 h-16 bg-indigo-600 rounded-full flex items-center justify-center mx-auto">
                     <Mail className="h-8 w-8 text-white" />
                   </div>
-                  <h3 className="text-xl font-semibold text-white">Email</h3>
+                  <h3 className="text-lg sm:text-xl font-semibold text-white">Email</h3>
                   <div className="space-y-2">
-                    <p className="text-indigo-300">sohampawar1866@gmail.com</p>
+                    <p className="text-indigo-300 text-sm sm:text-base break-all">sohampawar1866@gmail.com</p>
                     <Button
                       onClick={copyEmail}
                       size="sm"
                       variant="outline"
-                      className="bg-white/10 border-white/20 text-white hover:bg-white/20"
+                      className="bg-white/10 border-white/20 text-white hover:bg-white/20 transition-all duration-300"
                     >
                       {emailCopied ? (
                         <>
@@ -117,18 +117,18 @@ export default function ContactPage() {
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8, delay: 0.4 }}
             >
-              <Card className="bg-white/10 backdrop-blur-sm border-white/20 p-8 text-center hover:transform hover:scale-105 transition-all duration-300">
+              <Card className="bg-white/10 backdrop-blur-sm border-white/20 p-6 sm:p-8 text-center hover:transform hover:scale-105 transition-all duration-300">
                 <CardContent className="space-y-4">
                   <div className="w-16 h-16 bg-indigo-600 rounded-full flex items-center justify-center mx-auto">
                     <Linkedin className="h-8 w-8 text-white" />
                   </div>
-                  <h3 className="text-xl font-semibold text-white">LinkedIn</h3>
+                  <h3 className="text-lg sm:text-xl font-semibold text-white">LinkedIn</h3>
                   <div className="space-y-2">
-                    <p className="text-indigo-300">linkedin.com/in/sohampawar1866</p>
+                    <p className="text-indigo-300 text-sm sm:text-base break-all">linkedin.com/in/sohampawar1866</p>
                     <Button
                       onClick={() => window.open("https://www.linkedin.com/in/sohampawar1866/", "_blank")}
                       size="sm"
-                      className="bg-indigo-600 hover:bg-indigo-700"
+                      className="bg-indigo-600 hover:bg-indigo-700 transition-all duration-300"
                     >
                       Connect on LinkedIn
                     </Button>
@@ -144,15 +144,17 @@ export default function ContactPage() {
             transition={{ duration: 0.8, delay: 0.6 }}
           >
             <Card className="bg-white/10 backdrop-blur-sm border-white/20">
-              <CardContent className="p-8">
-                <h3 className="text-2xl font-semibold text-white mb-6 text-center">Send Me a Message</h3>
-                <p className="text-indigo-200 text-center mb-6">
+              <CardContent className="p-6 sm:p-8">
+                <h3 className="text-xl sm:text-2xl font-semibold text-white mb-4 sm:mb-6 text-center">
+                  Send Me a Message
+                </h3>
+                <p className="text-indigo-200 text-center mb-4 sm:mb-6 text-sm sm:text-base">
                   Fill out the form below and I'll get back to you as soon as possible!
                 </p>
-                <form onSubmit={handleSubmit} className="space-y-6">
-                  <div className="grid md:grid-cols-2 gap-4">
+                <form onSubmit={handleSubmit} className="space-y-4 sm:space-y-6">
+                  <div className="grid sm:grid-cols-2 gap-4">
                     <div>
-                      <label htmlFor="firstName" className="block text-white mb-2">
+                      <label htmlFor="firstName" className="block text-white mb-2 text-sm sm:text-base">
                         First Name
                       </label>
                       <Input
@@ -166,7 +168,7 @@ export default function ContactPage() {
                       />
                     </div>
                     <div>
-                      <label htmlFor="lastName" className="block text-white mb-2">
+                      <label htmlFor="lastName" className="block text-white mb-2 text-sm sm:text-base">
                         Last Name
                       </label>
                       <Input
@@ -181,7 +183,7 @@ export default function ContactPage() {
                     </div>
                   </div>
                   <div>
-                    <label htmlFor="message" className="block text-white mb-2">
+                    <label htmlFor="message" className="block text-white mb-2 text-sm sm:text-base">
                       Your Message
                     </label>
                     <Textarea
@@ -196,7 +198,7 @@ export default function ContactPage() {
                   <Button
                     type="submit"
                     size="lg"
-                    className="w-full bg-indigo-600 hover:bg-indigo-700"
+                    className="w-full bg-indigo-600 hover:bg-indigo-700 transition-all duration-300"
                     disabled={isSubmitting}
                   >
                     <Send className="mr-2 h-4 w-4" />
@@ -205,12 +207,12 @@ export default function ContactPage() {
                 </form>
                 {submitMessage && (
                   <div className="mt-6 p-4 rounded-lg bg-blue-500/20 text-blue-300 text-center">
-                    <p>{submitMessage}</p>
+                    <p className="text-sm sm:text-base">{submitMessage}</p>
                     <div className="mt-4 flex flex-col sm:flex-row gap-3 justify-center">
                       <Button
                         onClick={() => window.open("mailto:sohampawar1866@gmail.com", "_blank")}
                         size="sm"
-                        className="bg-green-600 hover:bg-green-700"
+                        className="bg-green-600 hover:bg-green-700 transition-all duration-300"
                       >
                         <Mail className="mr-2 h-4 w-4" />
                         Open Email App
@@ -219,7 +221,7 @@ export default function ContactPage() {
                         onClick={() => window.open("https://www.linkedin.com/in/sohampawar1866/", "_blank")}
                         size="sm"
                         variant="outline"
-                        className="bg-white/10 border-white/20 text-white hover:bg-white/20"
+                        className="bg-white/10 border-white/20 text-white hover:bg-white/20 transition-all duration-300"
                       >
                         <Linkedin className="mr-2 h-4 w-4" />
                         Message on LinkedIn
@@ -236,13 +238,13 @@ export default function ContactPage() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 1.0 }}
-          className="text-center mt-16"
+          className="text-center mt-12 sm:mt-16"
         >
           <Button
             size="lg"
             variant="outline"
             asChild
-            className="bg-white/10 border-white/20 text-white hover:bg-white/20"
+            className="bg-white/10 border-white/20 text-white hover:bg-white/20 transition-all duration-300 hover:scale-105"
           >
             <Link href="/">Back to Home</Link>
           </Button>
