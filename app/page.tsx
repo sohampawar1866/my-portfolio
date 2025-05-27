@@ -5,6 +5,7 @@ import Link from "next/link"
 import { ArrowRight, Download, Github, Linkedin, Mail, Menu, X } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import AnimatedBackground from "@/components/animated-background"
+import TypingAnimation from "@/components/typing-animation"
 import { useState } from "react"
 
 export default function HomePage() {
@@ -17,6 +18,8 @@ export default function HomePage() {
   const closeMobileMenu = () => {
     setIsMobileMenuOpen(false)
   }
+
+  const developerTexts = ["Web3 Developer", "MERN Developer"]
 
   return (
     <div className="min-h-screen relative overflow-hidden">
@@ -166,14 +169,20 @@ export default function HomePage() {
           Soham Pawar
         </motion.h1>
 
-        <motion.p
+        <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.9 }}
-          className="text-xl sm:text-2xl md:text-3xl text-blue-200 mb-8 sm:mb-12"
+          className="text-xl sm:text-2xl md:text-3xl text-blue-200 mb-8 sm:mb-12 min-h-[2.5rem] flex items-center justify-center"
         >
-          Web3 & MERN Developer
-        </motion.p>
+          <TypingAnimation
+            texts={developerTexts}
+            typingSpeed={120}
+            deletingSpeed={80}
+            pauseDuration={2500}
+            className="font-medium"
+          />
+        </motion.div>
 
         <motion.div
           initial={{ opacity: 0, y: 20 }}
