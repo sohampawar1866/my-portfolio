@@ -43,7 +43,7 @@ export default function AboutPage() {
           >
             <div className="w-80 h-80 rounded-2xl overflow-hidden border-4 border-blue-500/20 shadow-2xl">
               <img
-                src="/placeholder.svg?height=400&width=400"
+                src="/profile.png?height=400&width=400"
                 alt="Soham Pawar"
                 className="w-full h-full object-cover"
               />
