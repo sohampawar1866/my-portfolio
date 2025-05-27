@@ -97,7 +97,7 @@ export default function HomePage() {
             size="lg"
             variant="outline"
             className="bg-white/10 border-white/20 text-white hover:bg-white/20 backdrop-blur-sm"
-            onClick={() => window.open("/placeholder.svg", "_blank")}
+            onClick={() => window.open("/SohamProfile.pdf", "_blank")}
           >
             <Download className="mr-2 h-4 w-4" />
             Download CV
