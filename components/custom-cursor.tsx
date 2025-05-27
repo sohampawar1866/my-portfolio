@@ -2,6 +2,7 @@
 
 import { useEffect, useState, useRef } from "react"
 import { motion, useSpring, useMotionValue } from "framer-motion"
+import { usePathname } from "next/navigation"
 
 interface Particle {
   id: number
@@ -18,6 +19,7 @@ export default function CustomCursor() {
   const [cursorVariant, setCursorVariant] = useState("default")
   const [particles, setParticles] = useState<Particle[]>([])
   const particleId = useRef(0)
+  const pathname = usePathname()
 
   const cursorX = useMotionValue(0)
   const cursorY = useMotionValue(0)
@@ -45,7 +47,7 @@ export default function CustomCursor() {
           scale: Math.random() * 0.5 + 0.5,
         }
 
-        setParticles((prev) => [...prev.slice(-8), newParticle])
+        setParticles((prev: Particle[]) => [...prev.slice(-8), newParticle])
       }
     }
     const handleMouseDown = () => setIsClicking(true)
@@ -97,19 +99,27 @@ export default function CustomCursor() {
         el.removeEventListener("mouseleave", handleMouseLeave)
       })
     }
-  }, [cursorX, cursorY])
+  }, [cursorX, cursorY, pathname])
+
+  // Reset cursor state when pathname changes
+  useEffect(() => {
+    setCursorVariant("default")
+    setIsHovering(false)
+    setIsClicking(false)
+    setParticles([])
+  }, [pathname])
 
   // Animate particles
   useEffect(() => {
     const interval = setInterval(() => {
-      setParticles((prev) =>
+      setParticles((prev: Particle[]) =>
         prev
-          .map((particle) => ({
+          .map((particle: Particle) => ({
             ...particle,
             opacity: particle.opacity - 0.05,
             scale: particle.scale * 0.98,
           }))
-          .filter((particle) => particle.opacity > 0),
+          .filter((particle: Particle) => particle.opacity > 0),
       )
     }, 50)
 
@@ -176,7 +186,7 @@ export default function CustomCursor() {
   return (
     <>
       {/* Particle trail */}
-      {particles.map((particle) => (
+      {particles.map((particle: Particle) => (
         <motion.div
           key={particle.id}
           className="fixed pointer-events-none z-[9996] rounded-full"
