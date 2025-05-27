@@ -37,7 +37,9 @@
 
 **1. Clone the repository**
 git clone https://github.com/sohampawar1866/portfolio.git
+
 cd portfolio
+
 **2. Install dependencies**
 npm install
 
