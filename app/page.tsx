@@ -84,7 +84,7 @@ export default function HomePage() {
           transition={{ duration: 0.6, delay: 0.9 }}
           className="text-2xl md:text-3xl text-blue-200 mb-12"
         >
-          Web Developer
+          Web3 & MERN Developer
         </motion.p>
 
         <motion.div
