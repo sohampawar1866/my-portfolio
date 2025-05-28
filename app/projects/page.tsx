@@ -8,7 +8,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import Footer from "@/components/footer"
 
   function gitPrivateCheck(link) {
-  if(link!=""){
+  if(link!="#"){
     return window.open(link, "_blank");
   } else {
     return alert("Its a Private GITHUB repo, if u would like to contribute, please mail me personally");
@@ -16,7 +16,7 @@ import Footer from "@/components/footer"
   }
 
   function demoRunCheck(link) {
-  if(link!=""){
+  if(link!="#"){
     return window.open(link, "_blank");
   } else {
     return alert("PROJECT WORK IS STILL IN PROGRESS, if u would like to contribute, please mail me personally!");
@@ -28,7 +28,8 @@ export default function ProjectsPage() {
     {
       title: "E-Votrix: Smart WEB3 Based Voting Platform",
       image: "/pro_ev.png?height=300&width=400",
-      github: "https://github.com/sohampawar1866/evotrix",
+      github: "#",
+      private: true,
       demo: "https://evotrix.sohampawar.me",
       description:
         "A secure and transparent voting platform built on Ethereum blockchain using smart contracts. Features multi-authority verification, Aadhar-based voter auth, real-time vote count, and fraud prevention. Built with Next.js, TypeScript, Ethers.js, and deployed on Sepolia testnet.",
@@ -36,16 +37,17 @@ export default function ProjectsPage() {
     {
       title: "Portfolio Website",
       image: "/pro_pf.png?height=300&width=400",
-      github: "",
-      demo: "https://sohampawar1866.github.io/portfolio/",
+      github: "#",
+      private: true,
+      demo: "https://www.sohampawar.me",
       description:
         "A modern, responsive portfolio website built with React and Tailwind CSS, showcasing innovative web development projects, technical expertise, and professional experience. Features seamless navigation, interactive components, and optimized performance to highlight skills in frontend development and user experience design.",
     },
     {
       title: "Project Sankalpa - WORK IN PROGRESS",
       image: "/progress.jpg?height=300&width=400",
-      github: "",
-      demo: "",
+      github: "#",
+      demo: "#",
       description:
         "An autonomous blockchain assistant built with Next.js, TypeScript, and TensorFlow that executes smart contract interactions, automates DeFi operations, and makes data-driven decisions. Features real-time market analysis, portfolio management, and seamless Web3 integration for intelligent on-chain automation.",
     },
