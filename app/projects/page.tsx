@@ -7,7 +7,7 @@ import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import Footer from "@/components/footer"
 
-  export default function gitPrivateCheck(link) {
+  function gitPrivateCheck(link) {
   if(link!=""){
     return window.open(link, "_blank");
   } else {
@@ -15,7 +15,7 @@ import Footer from "@/components/footer"
   }
   }
 
-  export default function demoRunCheck(link) {
+  function demoRunCheck(link) {
   if(link!=""){
     return window.open(link, "_blank");
   } else {
