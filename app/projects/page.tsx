@@ -117,7 +117,7 @@ export default function ProjectsPage() {
                       <Button
                         size="sm"
                         className="bg-emerald-600 hover:bg-emerald-700 transition-all duration-300"
-                        onClick={() => window.open(project.demo, "_blank")}
+                        onClick={() => demoRunCheck(project.demo)}
                       >
                         <ExternalLink className="mr-2 h-4 w-4" />
                         Live Demo
