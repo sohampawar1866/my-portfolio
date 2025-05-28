@@ -7,6 +7,22 @@ import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import Footer from "@/components/footer"
 
+  export default function gitPrivateCheck(link) {
+  if(link!=""){
+    window.open(link, "_blank");
+  } else {
+    alert("Its a Private GITHUB repo, if u would like to contribute, please mail me personally");
+  }
+  }
+
+  export default function demoRunCheck(link) {
+  if(link!=""){
+    window.open(link, "_blank");
+  } else {
+    alert("PROJECT WORK IS STILL IN PROGRESS, if u would like to contribute, please mail me personally!");
+  }
+  }
+
 export default function ProjectsPage() {
   const projects = [
     {
@@ -26,7 +42,7 @@ export default function ProjectsPage() {
         "A modern, responsive portfolio website built with React and Tailwind CSS, showcasing innovative web development projects, technical expertise, and professional experience. Features seamless navigation, interactive components, and optimized performance to highlight skills in frontend development and user experience design.",
     },
     {
-      title: "Project Sankalpa - IN PROGRESS",
+      title: "Project Sankalpa - WORK IN PROGRESS",
       image: "/progress.jpg?height=300&width=400",
       github: "",
       demo: "",
@@ -34,22 +50,6 @@ export default function ProjectsPage() {
         "An autonomous blockchain assistant built with Next.js, TypeScript, and TensorFlow that executes smart contract interactions, automates DeFi operations, and makes data-driven decisions. Features real-time market analysis, portfolio management, and seamless Web3 integration for intelligent on-chain automation.",
     },
   ]
-
-  export default function gitPrivateCheck(link) {
-  if(link!=""){
-    window.open(link, "_blank");
-  } else {
-    alert("Its a Private GITHUB repo, if u would like to contribute, please mail me personally");
-  }
-  }
-
-  export default function demoRunCheck(link) {
-  if(link!=""){
-    window.open(link, "_blank");
-  } else {
-    alert("PROJECT WORK IS STILL IN PROGRESS, if u would like to contribute, please mail me personally!");
-  }
-  }
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-emerald-900 to-slate-900">
