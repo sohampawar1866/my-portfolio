@@ -20,7 +20,7 @@ export default function ProjectsPage() {
     {
       title: "Portfolio Website",
       image: "/pro_pf.png?height=300&width=400",
-      github: "https://github.com/sohampawar1866/portfolio",
+      github: "",
       demo: "https://sohampawar1866.github.io/portfolio/",
       description:
         "A modern, responsive portfolio website built with React and Tailwind CSS, showcasing innovative web development projects, technical expertise, and professional experience. Features seamless navigation, interactive components, and optimized performance to highlight skills in frontend development and user experience design.",
@@ -34,6 +34,10 @@ export default function ProjectsPage() {
         "An autonomous blockchain assistant built with Next.js, TypeScript, and TensorFlow that executes smart contract interactions, automates DeFi operations, and makes data-driven decisions. Features real-time market analysis, portfolio management, and seamless Web3 integration for intelligent on-chain automation.",
     },
   ]
+
+  gitPrivateCheck(link){
+    window.open(link, "_blank");
+  }
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-emerald-900 to-slate-900">
@@ -73,7 +77,7 @@ export default function ProjectsPage() {
               <Card className="bg-white/10 backdrop-blur-sm border-white/20 overflow-hidden hover:transform hover:scale-105 transition-all duration-300 h-full flex flex-col">
                 <div className="aspect-video overflow-hidden">
                   <img
-                    src={project.image || "/placeholder.svg"}
+                    src={project.image}
                     alt={project.title}
                     className="w-full h-full object-cover"
                   />
@@ -91,7 +95,7 @@ export default function ProjectsPage() {
                         size="sm"
                         variant="outline"
                         className="bg-white/10 border-white/20 text-white hover:bg-white/20 transition-all duration-300"
-                        onClick={() => window.open(project.github, "_blank")}
+                        onClick={() => gitPrivateCheck(project.github)}
                       >
                         <Github className="mr-2 h-4 w-4" />
                         Github
