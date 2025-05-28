@@ -9,17 +9,17 @@ import Footer from "@/components/footer"
 
   export default function gitPrivateCheck(link) {
   if(link!=""){
-    window.open(link, "_blank");
+    return window.open(link, "_blank");
   } else {
-    alert("Its a Private GITHUB repo, if u would like to contribute, please mail me personally");
+    return alert("Its a Private GITHUB repo, if u would like to contribute, please mail me personally");
   }
   }
 
   export default function demoRunCheck(link) {
   if(link!=""){
-    window.open(link, "_blank");
+    return window.open(link, "_blank");
   } else {
-    alert("PROJECT WORK IS STILL IN PROGRESS, if u would like to contribute, please mail me personally!");
+    return alert("PROJECT WORK IS STILL IN PROGRESS, if u would like to contribute, please mail me personally!");
   }
   }
 
