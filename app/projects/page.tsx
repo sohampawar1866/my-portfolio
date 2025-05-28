@@ -107,7 +107,7 @@ export default function ProjectsPage() {
                         size="sm"
                         variant="outline"
                         className="bg-white/10 border-white/20 text-white hover:bg-white/20 transition-all duration-300"
-                        onClick={gitPrivateCheck(project.github)}
+                        onClick={() => gitPrivateCheck(project.github)}
                       >
                         <Github className="mr-2 h-4 w-4" />
                         Github
@@ -117,7 +117,7 @@ export default function ProjectsPage() {
                       <Button
                         size="sm"
                         className="bg-emerald-600 hover:bg-emerald-700 transition-all duration-300"
-                        onClick={demoRunCheck(project.demo)}
+                        onClick={() => demoRunCheck(project.demo)}
                       >
                         <ExternalLink className="mr-2 h-4 w-4" />
                         Live Demo
